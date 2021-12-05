@@ -1,17 +1,10 @@
 import { Category } from "../model/Category";
+import {
+  ICategoriesRepository,
+  ICreateCategoryDTO,
+} from "./ICategoriesRepository";
 
-/* 
-  DTO é um meio-campo entre model, repo e routes.
-  As routes não podem saber quais dados estão no model, somente o repo pode.
-  Pra isso, criamos um objeto DTO na forma abaixo.
-*/
-
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
-
-class CategoriesRepository {
+class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
   // mesmo que const categories = []
@@ -20,7 +13,7 @@ class CategoriesRepository {
     this.categories = [];
   }
 
-  create({ description, name }: ICreateCategoryDTO): void {
+  create({ name, description }: ICreateCategoryDTO): void {
     const category = new Category();
 
     // assinalando para category as propriedades de Category
@@ -31,6 +24,15 @@ class CategoriesRepository {
     });
 
     this.categories.push(category);
+  }
+
+  list(): Category[] {
+    return this.categories;
+  }
+
+  findByName(name: string): Category {
+    const category = this.categories.find((category) => category.name === name);
+    return category;
   }
 }
 
