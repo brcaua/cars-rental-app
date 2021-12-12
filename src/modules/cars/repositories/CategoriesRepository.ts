@@ -7,11 +7,22 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
-  // mesmo que const categories = []
-  // em TS não usamos const
-  constructor() {
+  // using singleton instance
+  // eslint-disable-next-line no-use-before-define
+  private static INSTANCE: CategoriesRepository;
+
+  private constructor() {
     this.categories = [];
   }
+
+  public static getInstance(): CategoriesRepository {
+    if (!CategoriesRepository.INSTANCE) {
+      CategoriesRepository.INSTANCE = new CategoriesRepository();
+    }
+    return CategoriesRepository.INSTANCE;
+  }
+  // mesmo que const categories = []
+  // em TS não usamos const
 
   create({ name, description }: ICreateCategoryDTO): void {
     const category = new Category();
