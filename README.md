@@ -1,33 +1,46 @@
-# iCar
+<h1 align="center">
+iCar API
+</h1>
 
-## :bookmark: About
-An API to rental cars
+<p align="center">An car rentals API (partial) for study purposes.</p>
 
-## :rocket: Technologies used:
-- Node.js
-- Typescript
-- MongoDB
+<p align="center">
+  <a href="https://github.com/Rocketseat/youtube-clone-twitter/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/rocketseat/youtube-clone-twitter?color=%236633cc&logoColor=%236633cc&style=flat" alt="Contributors">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/github/license/rocketseat/youtube-clone-twitter?color=%236633cc&logo=mit" alt="License">
+  </a>
+</p>
 
-## :question: How to use
-- #### For run the project is needed some **pré-requisites:**
+<hr>
 
-  - It's **need** have **Node.js** instaled
-  - Also, it's **need** have a package mananger linke **NPM** or **Yarn**.
+## Participants
 
-1. Make a clone :
+[<img src="https://avatars.githubusercontent.com/u/46445777?v=4" width="75px;"/>](https://github.com/brcaua)
 
-```sh
-  $ git clone https://github.com/brcaua/cars-rental-app.git
-```
+[Breno Lima](https://github.com/brcaua)
 
-2. For execute the app, follow the next steps:
+## Techs
 
-```sh  
-  # Install dependencies
-  $ npm install
+- [x] Node.js
+- [x] MongoDB
+- [x] TypeScript
+- [x] Insomnia 
 
-  # Run API
-  $ npm run dev
-```
+## Ideas to implement
 
-## 🌟 Thanks
+- [ ] Create an interface using React.js (e.g. Initial page)
+- [ ] Personal back-end integration:
+  - [ ] PIX
+  - [ ] A currency converter from Real to Dollar
+  - [ ] And more...
+
+## Usage
+
+1. Run `npm install` or `yarn install`.<br />
+2. Run `yarn start`.<br />
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
